@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #777;
+}
+.header{
+    height: 90vh;
+    background-image: linear-gradient( to right bottom, rgba(37, 164, 186, 0.813), rgba(7, 80, 153, 0.813)), 
+    url(image/images.jpeg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+}
+.logo{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    height: 45px;
+}
+.text-box{
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translate(75%, -75%);
+    text-align: center;
+}
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+.heading-primary-main{
+    display: block;
+    font-size: 46px;
+    letter-spacing: 24px;
+    font-weight: 400;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+}
+.heading-primary-sub{
+    display: block;
+    font-weight: 700;
+    font-size: 27px;
+    letter-spacing: 5px;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+}
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline block;
+    border-radius: 100px;
+    transition: all 0.2s;
+}
+.btn-white{
+    background-color: #fff;
+}
+ .btn:hover{
+    transform: translateY(-3px);
+    box-shadow: rgba(0, 0, 0, 0.2);
+ }
+ .btn:active{
+    transform: translateY(-1px);
+    box-shadow: rgba(0, 0, 0, 0.2);
+ }
+ .btn::after{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 100px;
+    z-index: -1;
+    transition: all 0.4s;
+ }
+ .btn-white::after{
+    border: #fff;
+ }
+ .btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+ }
+ .btn-animated {
+    animation: moveInTop .2s ease-out 0.75s;
+ }
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInTop{
+    0%{
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
