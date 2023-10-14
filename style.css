@@ -24,8 +24,17 @@
 .flex-gap{
     gap:50px;
 }
+.flex-gap-25{
+    gap: 25px;
+}
 .col-1-of-2{
     width: 50%;
+}
+.col-1-of-3{
+    width: 33.33%;
+}
+.col-1-of-4{
+    width: 25%;
 }
 body{
     font-family: 'Lato', sans-serif;
@@ -192,6 +201,114 @@ body{
 }
 .img-box:hover .img:not(:hover){
     transform: scale(0.9);
+}
+.feature-section{
+    background-image: linear-gradient( to right bottom, rgba(37, 164, 186, 0.861), rgba(7, 80, 153, 0.865)), 
+    url(image/images.jpeg);
+   background-position: center;
+   padding: 170PX 140PX;
+   background-size: cover;
+   margin-top: -95px;
+   clip-path: polygon(1% 13%, 98% 0, 100% 87%, 0% 100%);
+   display: flex;
+}
+.skew-flex{
+    transform: skew(0deg, 7deg);
+}
+.icon-box{
+    border-radius: 3PX;
+    background-color: #f7f7f7;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    padding: 20px 12px;
+    text-align: center;
+    transition: all 0.2s;
+}
+.icon-box:hover{
+    transform: scale(1.01) translateY(-10px);
+    cursor: pointer;
+}
+.material-icons{
+    font-size: 50px;
+}
+
+.heading-fourth{
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+
+.pricing-section{
+    padding: 180px 150px;
+    background-color: #f8f3f3;
+    margin-top: -100px;
+}
+.card-container{
+    perspective: 1000px;
+    width: 250px;
+    height: 350px;
+    position: relative;
+}
+.card{
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
+.card-front,
+.card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+.card-back{ 
+    background-color: rgb(224, 113, 139);
+    color: aliceblue;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+.card-front{
+    background-color: #f7f7f7;
+    text-align: center;
+    color: #090303;
+}
+.inner-card{
+    height: 140px;
+    width: 100%;
+    background-image: linear-gradient(to bottom,rgba(255, 183, 1, 0.7), rgba(255, 120, 47, 0.7)),
+    url(image/images.jpeg);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 0 10px 25px 0;
+    
+}
+.card-title{
+    font-size: 36px;
+    font-weight: 300;
+    background-image: linear-gradient(to bottom,rgba(255, 183, 1, 0.7), rgba(255, 120, 47, 0.7));
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: right;
+
+}
+.feature-list{
+    padding: 25px 50px;
+}
+.feature-list ul{
+    list-style: none;
+}
+.feature-list ul li:not(:last-child){
+    border-bottom: 1px solid rgba(195, 193, 193, 0.482);
+    padding: 3px;
 }
 @keyframes moveInLeft{
     0%{
